@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ss.css">
+</head>
+<body>
+    <h2>THE CHECK CONSTRAINT CAN BE APPLIED TO A TABLE LEVEL.</h2>
+    <PRE>mysql> create table student(rollno int, gender char(1),
+        -> name varchar(20), age int, check (gender in('M','F') and age>18));
+        Query OK, 0 rows affected (1.26 sec)
+        
+        mysql> insert into student values(4263,'M','jahid',20);
+        Query OK, 1 row affected (0.05 sec)
+        
+        mysql> insert into student values(4264,'M','harshit',19);
+        Query OK, 1 row affected (0.08 sec)
+        
+        mysql> insert into student values(4269,'M','rahul',18);
+        ERROR 3819 (HY000): Check constraint 'student_chk_1' is violated.</PRE>
+</body>
+</html>

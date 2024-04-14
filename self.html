@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ss.css">
+
+</head>
+<body>
+    <h2>A SELF JOIN IS A REGULAR JOIN, BUT THE TABLE IS JOINED WITH ITSELF.</h2>
+    <PRE>mysql> select student.name,student_marks.total_marks from student,student_marks
+        -> where student.rollno=student_marks.rollno;
+    +----------+-------------+
+    | name     | total_marks |
+    +----------+-------------+
+    | Amandeep |          80 |
+    | Jahid    |          96 |
+    | Harshit  |          90 |
+    | Rahul    |          70 |
+    | Gaurav   |          85 |
+    | kuldeep  |          75 |
+    +----------+-------------+
+    6 rows in set (0.00 sec)</PRE>
+</body>
+</html>

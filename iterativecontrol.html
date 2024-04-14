@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ss.css">
+
+</head>
+<body>
+    <h2>ITERATIVE CONTROL STATEMENTS OR LOOP CONTROL STRUCTURES ARE USED WHEN WE WANT TO REPEAT THE EXECUTION OF ONE OR MORE STATEMENTS FOR SPECIFIED NUMBER OF TIMES.</h2><BR>
+    <H4>SIMPLE LOOP:<BR>
+        THE SIMPLEST  FORM OF LOOP STATEMENT IS THE BASIC LOOP, WHICH ENCLOSES A SEQUENCE OF STATEMENTS BETWEEN THE KEYWORDS LOOP AND END LOOP.</H4>
+        <PRE>declare
+            x number:=1;
+            begin
+            loop
+                dbms_output.put_line(x);
+                x:=x+1;
+            exit when(x=13);
+            end loop;
+            end;
+            
+        
+            Statement processed.
+            1
+            2
+            3
+            4
+            5
+            6
+            7
+            8
+            9
+            10
+            11
+            12</PRE><br>
+
+        <h4>WHILE LOOP:<BR>
+            YOU CAN USE THE WHILE LOOP TO REPEAT A SEQUENCE OF STATEMENTS UNTIL THE CONTROLLING CONDITION IS TRUE.</h4>
+            <PRE>declare
+                x number:=1;
+                begin
+                while (x<10) loop
+                        dbms_output.put_line(x);
+                        x:=x+1;
+                end loop;
+                end;
+
+                Statement processed.
+                1
+                2
+                3
+                4
+                5
+                6
+                7
+                8
+                9   
+                </PRE><br>
+
+        <h4>FOR LOOP:<BR>
+            FOR LOOPS HAVE THE SAME GENERAL STRUCTURE AS THE BASIC LOOP.</h4>
+            <PRE>declare
+                x number;
+                begin
+                for x in 1..11 loop
+                    dbms_output.put_line(x);
+                end loop;
+                end;
+            
+                Statement processed.
+                1
+                2
+                3
+                4
+                5
+                6
+                7
+                8
+                9
+                10
+                11</PRE>
+</body>
+</html>

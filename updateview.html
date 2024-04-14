@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ss.css">
+
+</head>
+<body>
+    <h2>UPDATE A RECORD INTO A VIEW.</h2>
+    <PRE>mysql> update v1 set section='b' where rollno=4208;
+        Query OK, 0 rows affected (0.01 sec)
+        Rows matched: 1  Changed: 0  Warnings: 0
+        
+        mysql> select * from v1;
+        +--------+----------+---------+
+        | rollno | name     | section |
+        +--------+----------+---------+
+        |   4247 | Amandeep | a       |
+        |   4263 | Jahid    | a       |
+        |   4264 | Harshit  | b       |
+        |   4269 | Rahul    | b       |
+        |   4303 | Gaurav   | b       |
+        |   4309 | kuldeep  | a       |
+        |   4208 | Nitin    | b       |
+        +--------+----------+---------+
+        7 rows in set (0.00 sec)</PRE>
+</body>
+</html>

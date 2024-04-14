@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ss.css">
+
+</head>
+<body>
+    <h2>THE ORDER OR ROWS RETURNED IN A QUERY RESULT IS UNDEFINED THE ORDER BY CLAUSE IS USED WITH SELECT STATEMENT TO SORT RESULTS EITHER IN ASCENDING OR DESCENDING ORDER.</h2>
+    <PRE>mysql> select * from student order by name;
+        +--------+----------+---------+---------+
+        | rollno | name     | class   | section |
+        +--------+----------+---------+---------+
+        |   4247 | Amandeep | BCA 4th | a       |
+        |   4303 | Gaurav   | BCA 4th | b       |
+        |   4264 | Harshit  | BCA 4th | b       |
+        |   4263 | Jahid    | BCA 4th | a       |
+        |   4309 | kuldeep  | BCA 4th | a       |
+        |   4208 | Nitin    | BCA 4th | b       |
+        |   4269 | Rahul    | BCA 4th | b       |
+        |   NULL | saksham  | NULL    | a       |
+        +--------+----------+---------+---------+
+        8 rows in set (0.03 sec)</PRE>
+</body>
+</html>

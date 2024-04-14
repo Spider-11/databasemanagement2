@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ss.css">
+
+</head>
+<body>
+    <h2>PRIMARY KEY CONSTRAINT CREATES A PRIMARY KEY FOR THE TABLE. TO APPLY A PRIMARY KEY TO A SPECIFIC COLUMN.
+    </h2>
+    <PRE>mysql> create table student(rollno int primary key, name varchar(20),
+        -> age int, class varchar(20), section char(1));
+    Query OK, 0 rows affected (1.70 sec)
+    
+    mysql> desc student;
+    +---------+-------------+------+-----+---------+-------+
+    | Field   | Type        | Null | Key | Default | Extra |
+    +---------+-------------+------+-----+---------+-------+
+    | rollno  | int         | NO   | PRI | NULL    |       |
+    | name    | varchar(20) | YES  |     | NULL    |       |
+    | age     | int         | YES  |     | NULL    |       |
+    | class   | varchar(20) | YES  |     | NULL    |       |
+    | section | char(1)     | YES  |     | NULL    |       |
+    +---------+-------------+------+-----+---------+-------+
+    5 rows in set (0.19 sec)</PRE>
+</body>
+</html>

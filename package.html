@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ss.css">
+
+</head>
+<body>
+    <h2>A PACKAGE IS A DATABASE OBJECT THAT GROUPS LOGICALLY RELATED PL/SQL OBJECTS, SUCH AS PROCEDURES, FUNCTIONS, VARIABLES, CURSORS AND TYPE DECLARATIONS INTO A SINGLE UNIT.</h2>
+    <PRE>create or replace package pack1 is   
+        procedure pro1(x number);  
+        function fun1(a number,b number) return number;  
+        end;  
+
+
+        Package created.
+    
+        creat
+        e or replace package body pack1 as   
+        procedure pro1(x number) is  
+        begin  
+        dbms_output.put_line(x);  
+        end pro1;  
+        function fun1(a number,b number) return number is   
+        begin  
+        dbms_output.put_line(a||b);  
+        return a+b;  
+        end;  
+        end;  
+          
+
+        Package Body created.
+    
+
+        begin 
+        pack1.pro1(30);
+        dbms_output.put_line(pack1.fun1(10,20)); 
+        end; 
+    
+
+        Statement processed.
+        30
+        1020
+        30</PRE>
+</body>
+</html>

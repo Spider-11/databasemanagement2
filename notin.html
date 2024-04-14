@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ss.css">
+
+</head>
+<body>
+    <h2>NOT IN OPERATOR IS INVERSE OF AN NOT OPERATOR.</h2>
+    <PRE>mysql> select * from student_marks where age not in
+        -> (select age from student_marks where age>19);
+    +--------+------+-------------+
+    | rollno | age  | total_marks |
+    +--------+------+-------------+
+    |   4264 |   19 |          90 |
+    |   4269 |   19 |          70 |
+    +--------+------+-------------+
+    2 rows in set (0.09 sec)</PRE>
+</body>
+</html>

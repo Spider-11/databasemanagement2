@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ss.css">
+</head>
+<body>
+    <h2>TO FETCH ALL DATA OF ONE ROW OF TABLE WITH ONE VARIABLE.</h2>
+    <PRE>declare
+        x student%rowtype;
+        begin
+        select * into x from student where roll=1;
+        dbms_output.put_line(x.roll||' '||x.name);
+        end;
+    
+        Statement processed.
+        1 rahul</PRE>
+</body>
+</html>

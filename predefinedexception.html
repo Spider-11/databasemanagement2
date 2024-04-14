@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ss.css">
+
+</head>
+<body>
+    <h2>PREDEFINED EXCEPTIONS ARE INTERNALLY DEFINED BY RUNTIME SYSTEM. PREDEFINED EXCEPTIONS ARE RAISED IMPLICITLY WHENEVER PL/SQL PROGRAM VIOLATES AN RULE A SYSTEM-DEPENDENT LIMIT.</h2>
+    <PRE>declare 
+        e emp%rowtype; 
+        begin 
+        select * into e from emp; 
+        exception 
+            when no_data_found then 
+            dbms_output.put_line('no data available'); 
+        when others then 
+            dbms_output.put_line('too many rows are there'); 
+        end; 
+    
+        Statement processed.
+        too many rows are there</PRE>
+</body>
+</html>

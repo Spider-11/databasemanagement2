@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ss.css">
+</head>
+<body>
+    <h2>CHECK CONSTRAINT CAN BE APPLIED USING ALTER STATEMENT COLUMN LEVEL.</h2>
+    <PRE>mysql> alter table student1 modify age int check (age>18);
+        Query OK, 0 rows affected (1.74 sec)
+        Records: 0  Duplicates: 0  Warnings: 0
+        
+        mysql> insert into student1 values(4264,'M','harshit',19);
+        Query OK, 1 row affected (0.06 sec)
+        
+        mysql> insert into student1 values(4269,'M','rahul',18);
+        ERROR 3819 (HY000): Check constraint 'student1_chk_1' is violated.</PRE>
+</body>
+</html>

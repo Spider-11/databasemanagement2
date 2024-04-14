@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ss.css">
+
+</head>
+<body>
+    <h2>A QUERY IS CALLED CORRELATED SUBQUERY WHEN BOTH THE INNER QUERY AND THE OUTER QUERY ARE INTERDEPENDENT.</h2>
+    <PRE>mysql> select rollno from student_marks where total_marks<
+        -> (select max(total_marks) from student_marks where total_marks>80);
+    +--------+
+    | rollno |
+    +--------+
+    |   4247 |
+    |   4264 |
+    |   4269 |
+    |   4303 |
+    |   4309 |
+    |   4301 |
+    +--------+
+    6 rows in set (0.00 sec)</PRE>
+</body>
+</html>

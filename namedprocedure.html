@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ss.css">
+
+</head>
+<body>
+    <h2>A NAMED PROCEDURE IS CREATED IN UNNAMED PROCEDURE SO THAT WE CAN IN THE UNNAMED PROCEDURE WHENEVER WE WANT.</h2>
+    <PRE>declare  
+        c number; 
+    procedure addition(a number,b in out number) is 
+    begin 
+    dbms_output.put_line(a||' '||b); 
+    b:=a+b; 
+    end; 
+    begin 
+        c:=10; 
+    addition(5,c); 
+    dbms_output.put_line(c); 
+    end; 
+
+    Statement processed.
+    5 10
+    15
+</PRE>
+</body>
+</html>

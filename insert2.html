@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ss.css">
+
+</head>
+<body>
+    <h2>INSERT INTO A STUDENT TO A SPECIFIC COLUMNS.</h2>
+    <PRE>mysql> insert into student (rollno,name,section) values(4264,'Harshit','b');
+        Query OK, 1 row affected (0.03 sec)
+        
+        mysql> insert into student (rollno,name,section) values(4208,'Nitin','b');
+        Query OK, 1 row affected (0.04 sec)
+        
+        mysql> insert into student (rollno,name,section) values(4269,'Rahul','b');
+        Query OK, 1 row affected (0.03 sec)
+        
+        mysql> insert into student (rollno,name,section) values(4303,'Gaurav','b');
+        Query OK, 1 row affected (0.04 sec)</PRE>
+        
+    <PRE>mysql> select * from student;
+        +--------+----------+---------+---------+
+        | rollno | name     | class   | section |
+        +--------+----------+---------+---------+
+        |   4247 | Amandeep | BCA 4th | a       |
+        |   4263 | Jahid    | BCA 4th | a       |
+        |   4264 | Harshit  | NULL    | b       |
+        |   4208 | Nitin    | NULL    | b       |
+        |   4269 | Rahul    | NULL    | b       |
+        |   4303 | Gaurav   | NULL    | b       |
+        +--------+----------+---------+---------+
+        6 rows in set (0.03 sec)</PRE>
+</body>
+</html>

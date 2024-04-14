@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ss.css">
+
+</head>
+<body>
+    <h2>THE UNION ALL OPERATOR JOINS THE OUTPUTS OF TWO OR MORE QUEIRIES INTO A SINGLE SET OF ROWS AND COLUMNS WITHOUT THE REMOVAL OF ANY DUPLICATES.</h2>
+    <PRE>mysql> select student.name,student.section,student_marks.total_marks
+        -> from student left join student_marks on
+        -> student.rollno=student_marks.rollno
+        -> union all
+        -> select student.name,student.section,student_marks.total_marks
+        -> from student right join student_marks on
+        -> student.rollno=student_marks.rollno;
+    +----------+---------+-------------+
+    | name     | section | total_marks |
+    +----------+---------+-------------+
+    | Amandeep | a       |          80 |
+    | Jahid    | a       |          96 |
+    | Harshit  | b       |          90 |
+    | Rahul    | b       |          70 |
+    | Gaurav   | b       |          85 |
+    | kuldeep  | a       |          75 |
+    | Nitin    | b       |        NULL |
+    | Amandeep | a       |          80 |
+    | Jahid    | a       |          96 |
+    | Harshit  | b       |          90 |
+    | Rahul    | b       |          70 |
+    | Gaurav   | b       |          85 |
+    | kuldeep  | a       |          75 |
+    | NULL     | NULL    |          65 |
+    +----------+---------+-------------+
+    14 rows in set (0.01 sec)</PRE>
+</body>
+</html>

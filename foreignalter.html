@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ss.css">
+
+</head>
+<body>
+    <h2>ADD FOREIGN KEY CONSTRAINT USING ALTER STATEMENT.</h2>
+    <PRE>mysql> alter table marks1 add foreign key (rollno) references student1(rollno);
+        Query OK, 0 rows affected (2.38 sec)
+        Records: 0  Duplicates: 0  Warnings: 0
+        
+        mysql> desc marks1;
+        +-------------+---------+------+-----+---------+-------+
+        | Field       | Type    | Null | Key | Default | Extra |
+        +-------------+---------+------+-----+---------+-------+
+        | rollno      | int     | YES  | MUL | NULL    |       |
+        | section     | char(1) | YES  |     | NULL    |       |
+        | total_marks | int     | YES  |     | NULL    |       |
+        +-------------+---------+------+-----+---------+-------+
+        3 rows in set (0.00 sec)
+        
+        mysql> insert into marks1 values(5353,'a',63);
+        ERROR 1452 (23000): Cannot add or update a child row: a foreign key constraint fails <BR>
+        (`student`.`marks1`, CONSTRAINT `marks1_ibfk_1` FOREIGN KEY (`rollno`) REFERENCES `student1` (`rollno`))</PRE>
+</body>
+</html>

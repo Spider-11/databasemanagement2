@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ss.css">
+
+</head>
+<body>
+    <h2>BY DEFAULT, A TABLE COLUMN CAN HOLD NULL VALUES. THE NOT NULL CONSTRAINT ENFORCES A COLUMN TO NOT ACCEPT NULL VALUES.</h2>
+        <PRE>mysql> create table student(rollno int not null, name varchar(20), age int);
+            Query OK, 0 rows affected (0.98 sec)
+            
+            mysql> desc student;
+            +--------+-------------+------+-----+---------+-------+
+            | Field  | Type        | Null | Key | Default | Extra |
+            +--------+-------------+------+-----+---------+-------+
+            | rollno | int         | NO   |     | NULL    |       |
+            | name   | varchar(20) | YES  |     | NULL    |       |
+            | age    | int         | YES  |     | NULL    |       |
+            +--------+-------------+------+-----+---------+-------+
+            3 rows in set (0.01 sec)</PRE>
+</body>
+</html>

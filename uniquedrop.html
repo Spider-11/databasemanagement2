@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ss.css">
+
+</head>
+<body>
+    <h2>DROP UNIQUE CONSTRAINT USING ALTER STATEMENT.</h2>
+    <PRE>mysql> alter table student2 drop constraint rollno;
+        Query OK, 0 rows affected (0.21 sec)
+        Records: 0  Duplicates: 0  Warnings: 0
+        
+        mysql> desc student2;
+        +--------+-------------+------+-----+---------+-------+
+        | Field  | Type        | Null | Key | Default | Extra |
+        +--------+-------------+------+-----+---------+-------+
+        | rollno | int         | YES  |     | NULL    |       |
+        | name   | varchar(20) | YES  |     | NULL    |       |
+        | age    | int         | YES  |     | NULL    |       |
+        +--------+-------------+------+-----+---------+-------+
+        3 rows in set (0.00 sec)</PRE>
+</body>
+</html>

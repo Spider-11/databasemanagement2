@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ss.css">
+
+</head>
+<body>
+    <h2>IMPLICIT CURSORS ARE DECLARED BY PL/SQL IMPLICITLY WHEN DML STATEMENTS LIKE, INSERT, UPDATE AND DELETE STATEMENTS ARE EXECUTED. THEY ARE ALSO DECLARED WHEN A SELECT STATEMENT THAT RETURNS JUST ONE ROW IS EXECUTED.</h2>
+    <PRE>declare
+        x number;
+        begin
+        update student set roll=1;
+        if sql%found then
+            x:=sql%rowcount;
+            dbms_output.put_line('Total lines are: '||x);
+        elsif sql%notfound then
+            x:=sql%rowcount;
+        dbms_output.put_line('Total lines are: '||x);
+        end if;
+        end;
+    
+        Statement processed.
+        Total lines are: 4
+        </PRE>
+</body>
+</html>

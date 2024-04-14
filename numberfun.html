@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ss.css">
+
+</head>
+<body>
+    <h2>NUMBER OR NUMERIC FUNCTIONS ARE USED TO PERFORM OPERATIONS ON NUMBERS. THEY ACCEPT NUMERIC VALUES AS INPUT AND RETURN NUMERIC VALUES AS OUTPUT.</h2>
+    <BR>
+    <H4>ABS(N):<BR>
+        THIS FUNCTION RETURNS ABSOLUTE VALUE OF THE COLUMN OR VALUE PASSED.</H4>
+        <PRE>mysql> select abs(-53) from dual;
+            +----------+
+            | abs(-53) |
+            +----------+
+            |       53 |
+            +----------+
+            1 row in set (0.09 sec)</PRE>
+            <BR>
+
+    <H4>CEIL(N):<BR>
+        THIS FUNCTION FINDS THE SMALLEST INTEGER GREATER THAN OR EQUAL TO N. WHERE N CAN BE EITHER COLUMN NAME OR EXPRESSION.</H4>
+        <PRE>mysql> select ceil(88.9) from dual;
+            +------------+
+            | ceil(88.9) |
+            +------------+
+            |         89 |
+            +------------+
+            1 row in set (0.05 sec)</PRE><BR>
+
+    <H4>FLOOR(N):<BR>
+        THIS FUNCTION FINDS THE LARGEST INTEGER LESS THAN OR EQUAL TO THE VALUE N. WHERE N CAN BE EITHER COLUMN NAME OR EXPRESSION.</H4>
+        <PRE>mysql> select floor(88.8) from dual;
+            +-------------+
+            | floor(88.8) |
+            +-------------+
+            |          88 |
+            +-------------+
+            1 row in set (0.02 sec)</PRE><BR>
+
+    <H4>MOD(M,N):<BR>
+        THIS FUNCTION RETURNS THE REMAINDER OF M DIVIDED BY N; OR M IF N=0.</H4>
+        <PRE>mysql> select mod(20,3) from dual;
+            +-----------+
+            | mod(20,3) |
+            +-----------+
+            |         2 |
+            +-----------+
+            1 row in set (0.04 sec)</PRE><BR>
+
+    <H4>POWER(M,N):<BR>
+        THIS FUNCTION RETURNS M RAISED TO THE POWER N. THE SECOND ARGUMENT N MUST BE AN INTEGER.</H4>
+        <PRE>mysql> select power(4,4) from dual;
+            +------------+
+            | power(4,4) |
+            +------------+
+            |        256 |
+            +------------+
+            1 row in set (0.00 sec)</PRE><BR>
+
+    <H4>SQRT(N):<BR>
+        THIS FUNCTION RETURNS THE SQUARE ROOT OF N. WHERE N CAN BE EITHER COLUMN NAME OR EXPRESSION.</H4>
+        <PRE>mysql> select sqrt(25) from dual;
+            +----------+
+            | sqrt(25) |
+            +----------+
+            |        5 |
+            +----------+
+            1 row in set (0.02 sec)</PRE><BR>
+
+    <H4>ROUND(M,[N]):<BR>
+        THIS FUNCTION ROUNDS THE COLUMN, EXPRESSION OR VALUE M TO N DECIMAL PLACES.</H4>
+        <PRE>mysql> select round(90.8535724,2) from dual;
+            +---------------------+
+            | round(90.8535724,2) |
+            +---------------------+
+            |               90.85 |
+            +---------------------+
+            1 row in set (0.02 sec)</PRE>
+</body>
+</html>

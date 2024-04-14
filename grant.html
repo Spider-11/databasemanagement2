@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ss.css">
+
+</head>
+<body>
+    <h2>GIVE THE PREVILIGES TO USER.</h2>
+    <PRE>mysql> grant select on student to jahid;
+        Query OK, 0 rows affected (0.29 sec)</PRE>
+
+    <PRE>mysql> select * from student;
+        +--------+----------+---------+---------+
+        | rollno | name     | class   | section |
+        +--------+----------+---------+---------+
+        |   4247 | Amandeep | BCA 4th | a       |
+        |   4263 | Jahid    | BCA 4th | a       |
+        |   4264 | Harshit  | BCA 4th | b       |
+        |   4269 | Rahul    | BCA 4th | b       |
+        |   4303 | Gaurav   | BCA 4th | b       |
+        +--------+----------+---------+---------+
+        5 rows in set (0.00 sec)</PRE>
+
+    <PRE>mysql> insert into student values(4309,'kuldeep','BCA 4th','a');
+        ERROR 1142 (42000): INSERT command denied to user 'jahid'@'localhost' for table 'student'</PRE>
+</body>
+</html>

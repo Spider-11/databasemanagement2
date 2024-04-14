@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ss.css">
+
+</head>
+<body>
+    <h2>IN INDICATES THAT WHEN THE ROW IN THE PARENT TABLE IS DELETED. THE DEPENDENT ROWS IN THE CHILD TABLE WILL ALSO BE DELETED AND SET THE NULL VALUE.
+    </h2>
+    <PRE>mysql> create table marks1(rollno int, section char(1),
+        -> total_marks int,foreign key(rollno) references student(rollno) on delete set null);
+        Query OK, 0 rows affected (0.54 sec)
+
+        mysql> select * from student;
+        +--------+-------+------+-------+---------+
+        | rollno | name  | age  | class | section |
+        +--------+-------+------+-------+---------+
+        |   4208 | nitin |   19 | BCA   | b       |
+        |   4263 | jahid |   20 | BCA   | a       |
+        +--------+-------+------+-------+---------+
+        2 rows in set (0.00 sec)
+        
+        mysql> insert into marks1 values(4263,'a',83);
+        Query OK, 1 row affected (0.04 sec)
+        
+        mysql> insert into marks1 values(4208,'b',45);
+        Query OK, 1 row affected (0.06 sec)
+        
+        mysql> delete from student where rollno=4208;
+        Query OK, 1 row affected (0.09 sec)
+        
+        mysql> select * from marks1;
+        +--------+---------+-------------+
+        | rollno | section | total_marks |
+        +--------+---------+-------------+
+        |   4263 | a       |          83 |
+        |   NULL | b       |          45 |
+        +--------+---------+-------------+
+        2 rows in set (0.00 sec)</PRE>
+</body>
+</html>

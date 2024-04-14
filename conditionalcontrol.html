@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ss.css">
+</head>
+<body>
+    <h2>THE STRUCTURE OF THE PL/SQL IF STATEMENT IS SIMILAR TO THE STRUCTURE OF IF STATEMENTS IN OTHER PROCEDURAL LANGUAGES.</h2>
+
+    <H4>IF-THEN-END IF</H4>
+    <PRE>declare
+        x number;
+        y number;
+        begin
+        x:=30;
+        y:=20;
+        if x>y then
+            dbms_output.put_line('x is biggest than y');
+        end if;
+        end;
+
+        
+        Statement processed.
+        x is biggest than y
+        </PRE><br>
+
+    <h4>IF-THEN-ELSE-END IF</h4>
+    <PRE>declare
+        x number;
+        y number;
+        begin
+        x:=10;
+        y:=20;
+        if x>y then
+            dbms_output.put_line('x is biggest than y');
+        else
+            dbms_output.put_line('y is biggest than x');
+        end if;
+        end;
+    
+        Statement processed.
+        y is biggest than x</PRE><br>
+
+    <h4>IF-THEN-ELSIF-END IF</h4>
+    <PRE>declare
+        x number;
+        y number;
+        z number;
+        begin
+        x:=10;
+        y:=20;
+        z:=30;
+        if x>y then
+            if x>z then
+                dbms_output.put_line('x is biggest number');
+           else
+               dbms_output.put_line('z is biggest number');
+            end if;
+        elsif y>z then
+            dbms_output.put_line('y is biggest number');
+        else
+            dbms_output.put_line('z is biggest number');
+        end if;
+        end;
+    
+        Statement processed.
+        z is biggest number</PRE>
+</body>
+</html>

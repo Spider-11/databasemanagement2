@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ss.css">
+
+</head>
+<body>
+    <h2>THE WHERE CLAUSE IS USED WHEN YOU WANT TO RETRIEVE SPECIFIC INFORMATION FROM THE TABLE EXCLUDING OTHER IRRELEVANT DATA.</h2>
+    <PRE>mysql> select * from student where section='a';
+        +--------+----------+---------+---------+
+        | rollno | name     | class   | section |
+        +--------+----------+---------+---------+
+        |   4247 | Amandeep | BCA 4th | a       |
+        |   4263 | Jahid    | BCA 4th | a       |
+        |   4309 | kuldeep  | BCA 4th | a       |
+        +--------+----------+---------+---------+
+        3 rows in set (0.00 sec)</PRE>
+</body>
+</html>

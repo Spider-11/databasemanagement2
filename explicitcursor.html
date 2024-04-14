@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ss.css">
+
+</head>
+<body>
+    <h2>EXPLICIT CURSORS ARE DECLARED EXPLICITLY BY THE USER, ALONG WITH OTHER IDENTIFIERS TO BE USED IN A PL/SQL BLOCK. THESE ARE ALSO KNOWN AS USER-DEFINED CURSORS, DEFINED IN THE DECLARE SECTION OF THE PL/SQL BLOCK.</h2>
+    <PRE>declare 
+        cursor cur is select * from student; 
+        x student%rowtype; 
+        begin 
+        open cur; 
+        loop 
+        fetch cur into x; 
+        exit when(cur%notfound); 
+        dbms_output.put_line(x.name); 
+        end loop; 
+        close cur; 
+        end; 
+    
+        Statement processed.
+        rahul
+        aman
+        jahid
+        harshit</PRE>
+</body>
+</html>

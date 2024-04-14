@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ss.css">
+</head>
+<body>
+    <h2>THE CHECK CONSTRAINT DEFINES A CONDITION THAT EACH ROW MUST SATISFY. IT IS USED TO LIMIT THE VALUE RANGE THAT CAN BE PLACED IN A COLUMN.</h2>
+        <PRE>mysql> create table student3(rollno int, gender char(1) check (gender in('M','F')),
+            -> name varchar(20));
+        Query OK, 0 rows affected (0.51 sec)
+        
+        mysql> desc student3;
+        +--------+-------------+------+-----+---------+-------+
+        | Field  | Type        | Null | Key | Default | Extra |
+        +--------+-------------+------+-----+---------+-------+
+        | rollno | int         | YES  |     | NULL    |       |
+        | gender | char(1)     | YES  |     | NULL    |       |
+        | name   | varchar(20) | YES  |     | NULL    |       |
+        +--------+-------------+------+-----+---------+-------+
+        3 rows in set (0.00 sec)
+        
+        mysql> insert into student3 values(4263,'M','jahid');
+        Query OK, 1 row affected (0.10 sec)
+        
+        mysql> insert into student3 values(4264,'j','harshit');
+        ERROR 3819 (HY000): Check constraint 'student3_chk_1' is violated.</PRE>
+</body>
+</html>

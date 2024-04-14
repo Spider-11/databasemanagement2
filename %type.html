@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ss.css">
+</head>
+<body>
+    <h2>TO AVOID TYPE AND SIZE CONFLICK BETWEEN A VARIABLE AND THE COLUMN OF A TABLE, THE ATTRIBUTE %TYPE IS USED.</h2>
+    <PRE>declare
+        x student.roll%type;
+        y student.name%type;
+        begin
+        select roll,name into x,y from student where roll=1;
+        dbms_output.put_line(x ||' '|| y);
+        end;
+        
+    
+        Statement processed.
+        1 rahul</PRE>
+</body>
+</html>

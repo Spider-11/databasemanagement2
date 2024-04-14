@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ss.css">
+
+</head>
+<body>
+    <h2>A STORED FUNCTION IS A DATABASE OBJECT WHICH CAN BE CALLED MULTIPLE TIMES BECAUSE IT IS STORED IN THE DATABASE PERMANENTLY. THE FUNCTION WILL ALWAYS RETURN A VALUE.</h2>
+    <PRE>create or replace function fun1(a number,b number) return number is  
+        begin 
+        return a+b; 
+        end; 
+         
+
+        Function created.
+    
+        begin 
+        dbms_output.put_line(fun1(10,20)); 
+        end; 
+         
+
+        Statement processed.
+        30</PRE>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ss.css">
+
+</head>
+<body>
+    <h2>TO GIVE A CONSTRAINT NAME OF THE PRIMARY KEY.</h2>
+    <PRE>mysql> create table student2(rollno int, name varchar(20), age int,
+        -> class varchar(20),section char(1), stu_id int,
+        -> constraint pk_id primary key(rollno,stu_id));
+        Query OK, 0 rows affected (2.67 sec)
+
+        mysql> desc student2;
+        +---------+-------------+------+-----+---------+-------+
+        | Field   | Type        | Null | Key | Default | Extra |
+        +---------+-------------+------+-----+---------+-------+
+        | rollno  | int         | NO   | PRI | NULL    |       |
+        | name    | varchar(20) | YES  |     | NULL    |       |
+        | age     | int         | YES  |     | NULL    |       |
+        | class   | varchar(20) | YES  |     | NULL    |       |
+        | section | char(1)     | YES  |     | NULL    |       |
+        | stu_id  | int         | NO   | PRI | NULL    |       |
+        +---------+-------------+------+-----+---------+-------+
+        6 rows in set (0.04 sec)</PRE>
+</body>
+</html>

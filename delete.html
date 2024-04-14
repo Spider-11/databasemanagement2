@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ss.css">
+
+</head>
+<body>
+    <h2>DELETE A RECORD INTO A STUDENT.</h2>
+    <PRE>mysql> delete from student where rollno=4208;
+        Query OK, 1 row affected (0.07 sec)</PRE>
+    
+    <PRE>mysql> select * from student;
+        +--------+----------+---------+---------+
+        | rollno | name     | class   | section |
+        +--------+----------+---------+---------+
+        |   4247 | Amandeep | BCA 4th | a       |
+        |   4263 | Jahid    | BCA 4th | a       |
+        |   4264 | Harshit  | BCA 4th | b       |
+        |   4269 | Rahul    | BCA 4th | b       |
+        |   4303 | Gaurav   | BCA 4th | b       |
+        +--------+----------+---------+---------+
+        5 rows in set (0.00 sec)</PRE>
+</body>
+</html>

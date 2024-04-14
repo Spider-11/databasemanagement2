@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ss.css">
+</head>
+<body>
+    <h2>CREATE A VIEW WITH SPECIFIC COLUMNS.</h2>
+    <PRE>mysql> create view v1 (rollno,name) as select rollno,name from student;
+        Query OK, 0 rows affected (0.10 sec)
+        
+        mysql> select * from v1;
+        +--------+----------+
+        | rollno | name     |
+        +--------+----------+
+        |   4247 | Amandeep |
+        |   4263 | Jahid    |
+        |   4264 | Harshit  |
+        |   4269 | Rahul    |
+        |   4303 | Gaurav   |
+        |   4309 | kuldeep  |
+        +--------+----------+
+        6 rows in set (0.03 sec)</PRE>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ss.css">
+
+</head>
+<body>
+    <h2>THE UNIQUE CONSTRAINT IDENTIFIES EACH RECORD IN A DATABASE TABLE. IT ENSURES THAT THE VALUES ENTERED INTO A COLUMN IS UNIQUE.</h2>
+        <PRE>
+            mysql> create table student(rollno int unique, name varchar(20), age int);
+        Query OK, 0 rows affected (0.54 sec)
+
+        mysql> desc student;
+        +--------+-------------+------+-----+---------+-------+
+        | Field  | Type        | Null | Key | Default | Extra |
+        +--------+-------------+------+-----+---------+-------+
+        | rollno | int         | YES  | UNI | NULL    |       |
+        | name   | varchar(20) | YES  |     | NULL    |       |
+        | age    | int         | YES  |     | NULL    |       |
+        +--------+-------------+------+-----+---------+-------+
+        3 rows in set (0.00 sec)
+        </PRE>
+</body>
+</html>

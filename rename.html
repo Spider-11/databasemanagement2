@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ss.css">
+
+</head>
+<body>
+    <h2>RENAME A TABLE.</h2>
+    <PRE>mysql> rename table student to student2;
+        Query OK, 0 rows affected (0.45 sec)</PRE>
+
+    <PRE>mysql> desc student2;
+        +---------+-------------+------+-----+---------+-------+
+        | Field   | Type        | Null | Key | Default | Extra |
+        +---------+-------------+------+-----+---------+-------+
+        | rollno  | varchar(20) | YES  |     | NULL    |       |
+        | name    | varchar(20) | YES  |     | NULL    |       |
+        | class   | varchar(20) | YES  |     | NULL    |       |
+        | section | char(1)     | YES  |     | NULL    |       |
+        | dob     | date        | YES  |     | NULL    |       |
+        +---------+-------------+------+-----+---------+-------+
+        5 rows in set (0.00 sec)</PRE>
+</body>
+</html>

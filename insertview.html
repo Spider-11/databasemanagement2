@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ss.css">
+
+</head>
+<body>
+    <h2>INSERT A RECORD INTO A VIEW.</h2>
+<pre>mysql> insert into v1 values(4208,'Nitin','b');
+    Query OK, 1 row affected (0.08 sec)
+    
+    mysql> select * from v1;
+    +--------+----------+---------+
+    | rollno | name     | section |
+    +--------+----------+---------+
+    |   4247 | Amandeep | a       |
+    |   4263 | Jahid    | a       |
+    |   4264 | Harshit  | b       |
+    |   4269 | Rahul    | b       |
+    |   4303 | Gaurav   | b       |
+    |   4309 | kuldeep  | a       |
+    |   4208 | Nitin    | b       |
+    +--------+----------+---------+
+    7 rows in set (0.00 sec)</pre>
+</body>
+</html>

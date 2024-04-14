@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ss.css">
+
+</head>
+<body>
+    <H2>IN OPERATOR IS USED WHEN YOU WANT TO COMPARE A COLUMN WITH MORE THAN ONE VALUE.</H2>
+    <pre>mysql> select * from student_marks where age in
+        -> (select age from student_marks where age>19);
+    +--------+------+-------------+
+    | rollno | age  | total_marks |
+    +--------+------+-------------+
+    |   4247 |   20 |          80 |
+    |   4263 |   20 |          96 |
+    |   4303 |   20 |          85 |
+    |   4309 |   20 |          75 |
+    |   4301 |   20 |          65 |
+    +--------+------+-------------+
+    5 rows in set (0.01 sec)
+    </pre>
+</body>
+</html>

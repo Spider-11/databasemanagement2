@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ss.css">
+
+</head>
+<body>
+    <h2>A STORED PROCEDURE IS A DATABASE OBJECT WHICH CAN BE CALLED MULTIPLE TIMES BECAUSE IT IS STORED IN THE DATABASE PERMANENTLY.</h2>
+    <PRE>create or replace procedure PROCEDURE_1(a number,b out number)   
+        is  
+        begin  
+            b:=5+a;
+            dbms_output.put_line(a||' '||b);  
+        end;
+    
+
+        declare 
+        c number; 
+        begin 
+        procedure_1(10,c); 
+        dbms_output.put_line(c); 
+        end; 
+    
+
+        Statement processed.
+        10 15
+        15</PRE>
+</body>
+</html>

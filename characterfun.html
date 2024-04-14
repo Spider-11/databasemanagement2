@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ss.css">
+</head>
+<body>
+    <h2>CHARACTER OR TEXT FUNCTIONS ARE USED TO MANIPULATE TEXT STRINGS. THEY ACCEPT STRING OR CHARACTER DATA AS INPUT AND CAN RETURN BOTH CHARACTER AND NUMERIC VALUES.<BR></h2>
+
+    <H4>LOWER(STRING):<BR>
+        THIS FUNCTION CONVERTS MIXED CASE OR UPPERCASE CHARACTER STRINGS TO LOWERCASE.</H4>
+        <PRE>mysql> select lower(name) from student;
+            +-------------+
+            | lower(name) |
+            +-------------+
+            | jahid       |
+            | harshit     |
+            | rahul       |
+            | nitin       |
+            +-------------+
+            4 rows in set (0.03 sec)</PRE><BR>
+
+    <H4>UPPER(STRING):<BR>
+        THIS FUNCTION CONVERTS MIXED CASE OR LOWERCASE CHARACTER STRINGS TO UPPERCASE.</H4>
+        <PRE>mysql> select upper(name) from student;
+            +-------------+
+            | upper(name) |
+            +-------------+
+            | JAHID       |
+            | HARSHIT     |
+            | RAHUL       |
+            | NITIN       |
+            +-------------+
+            4 rows in set (0.00 sec)</PRE><BR>
+        
+    <H4>CONCAT(STRING1, STRING2):<BR>
+        THIS FUNCTION JOINS TWO STRING VALUES TOGETHER. IT RETURNS STRING1 CONCATENATED WITH STRING2. THIS FUNCTION IS SIMILAR TO || OPERATOR.</H4>
+        <PRE>mysql> select concat('mohd' ' jahid') as myname from dual;
+            +------------+
+            | myname     |
+            +------------+
+            | mohd jahid |
+            +------------+
+            1 row in set (0.00 sec)</PRE><BR>
+            
+    <H4>SUBSTR(STRING, M[N]):<BR>
+        THIS FUNCTION RETURNS A SUBSTRING, N CHARACTERS LONG FROM THE STRING SPECIFIED, STARTING AT POSITION NUMBER M. IF N IS NOT SPECIFIED, THE STRING IS EXTRACTED FROM POSITION M TO END.</H4>
+        <PRE>mysql> select substr(name,2,4) from student;
+            +------------------+
+            | substr(name,2,4) |
+            +------------------+
+            | ahid             |
+            | arsh             |
+            | ahul             |
+            | itin             |
+            +------------------+
+            4 rows in set (0.07 sec)</PRE><BR>
+
+    <H4>LENGTH(STRING):<BR>
+        THIS FUNCTION RETURNS THE LENGTH OF A STRING AS A NUMERIC VALUE. THIS FUNCTION IS USUALLY APPLICABLE ONLY WITH VARCHAR2 AND NOT WITH CHAR TYPE COLUMNS.</H4>
+        <PRE>mysql> select length(name) from student;
+            +--------------+
+            | length(name) |
+            +--------------+
+            |            5 |
+            |            7 |
+            |            5 |
+            |            5 |
+            +--------------+
+            4 rows in set (0.00 sec)</PRE><BR>
+    
+    <H4>INSTR(STRING,CHAR):<BR>
+        THIS FUNCTION RETURNS THE POSITION OF FIRST OCCURENCE OF 'CHAR' IN 'STRING'.</H4>
+        <PRE>mysql> select instr(name,'h') from student;
+            +-----------------+
+            | instr(name,'h') |
+            +-----------------+
+            |               3 |
+            |               1 |
+            |               3 |
+            |               0 |
+            +-----------------+
+            4 rows in set (0.10 sec)</PRE><BR>
+
+    <H4>ASCII(STRING):<BR>
+        THIS FUNCTION RETURNS THE DECIMAL REPRESENTATION OF THE FIRST CHARACTER OF STRING IN THE DATABASE CHARACTER SET.</H4>
+        <PRE>mysql> select ascii(name) from student;
+            +-------------+
+            | ascii(name) |
+            +-------------+
+            |         106 |
+            |         104 |
+            |         114 |
+            |         110 |
+            +-------------+
+            4 rows in set (0.00 sec)</PRE>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ss.css">
+</head>
+<body>
+    <h2>TRIGGER IS A NAMED PL/SQL PROGRAM UNIT ASSOCIATED WITH A SPECIFIC DATABASE TABLE. IT IS STORED IN THE DATABASE AND EXECUTED AUTOMATICALLY IN RESPONSE TO A SPECIFIC EVENT THAT OCCURS IN THE TABLE.</h2>
+    <BR>
+    
+    <H4>BEFORE TRIGGER:<BR>
+        WHEN DEFINING A TRIGGER, YOU CAN SPECIFY THE TRIGGER TIMING. THAT IS, YOU CAN SPECIFY WHETHER THE TRIGGER ACTION IS TO BE EXECUTED BEFORE OR AFTER THE TRIGGERING STATEMENT.</H4>
+        <BR>
+    <PRE>CREATE OR REPLACE TRIGGER tr
+        BEFORE INSERT ON stu
+        REFERENCING OLD AS pre NEW AS post
+        FOR EACH ROW
+        WHEN (post.roll > 10)
+        BEGIN
+            IF INSERTING THEN
+                :POST.name := UPPER(:POST.name);
+            END IF;
+        END;
+        
+    
+        Trigger created.
+    
+
+        insert into stu values(8,'nitin');
+        insert into stu values(10,'pankaj');
+        insert into stu values(16,'atul');
+        insert into stu values(47,'aman');
+        select * from stu;
+    
+        1 row(s) inserted.
+
+        1 row(s) inserted.
+        
+        1 row(s) inserted.
+        
+        1 row(s) inserted.
+        
+        Result Set 3
+        ROLL	NAME
+        8	    nitin
+        10	    pankaj
+        16	    ATUL
+        47	    AMAN
+        </PRE>
+        <br>
+
+    <h4>AFTER TRIGGER:<BR>
+        AFTER TRIGGERS ARE FIRED AFTER THE TRIGGERING ACTION SI COMPLETED.</h4>
+        <PRE>create or replace trigger tr 
+            after delete on stu 
+                referencing old as pre new as post 
+            for each row  
+            begin 
+            if deleting then 
+            dbms_output.put_line(:pre.name); 
+            end if; 
+            end; 
+        
+            delete from stu where roll=8;
+        
+            1 row(s) deleted.
+            nitin</PRE>
+</body>
+</html>

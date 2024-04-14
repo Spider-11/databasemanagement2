@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ss.css">
+</head>
+<body>
+    <h2>DATE FUNCTIONS OPERATE ON ORACLE DATES. THESE ARE THE FUNCTIONS THAT TAKE VALUES OF DATE DATATYPE AS INPUT AND RETURN VALUES OF DATE DATATYPE AS OUTPUT.</h2>
+    <BR>
+    
+    <H4>SYSDATE():<BR>
+        SYSDATE IS A PSEUDO-COLUMN THAT RETURNS THE SYSTEM'S CURRENT DATE AND TIME OF TYPE DATE. THE SYSDATE CAN BE USED JUST AS ANY OTHER COLUMN NAME.</H4>
+        <PRE>mysql> select sysdate() from dual;
+            +---------------------+
+            | sysdate()           |
+            +---------------------+
+            | 2024-04-13 10:23:25 |
+            +---------------------+
+            1 row in set (0.02 sec)</PRE><br>
+
+    <h4>ADDDATE():<BR>
+        ADD TIME VALUES (INTERVALS) TO A DATE VALUE.</h4>
+        <PRE>mysql> select date_add(sysdate(),interval 31 day);
+            +-------------------------------------+
+            | date_add(sysdate(),interval 31 day) |
+            +-------------------------------------+
+            | 2024-05-14 10:38:31                 |
+            +-------------------------------------+
+            1 row in set (0.01 sec)</PRE><BR>
+
+    <H4>CURDATE():<BR>
+        RETURN THE CURRENT DATE.</H4>
+        <PRE>mysql> select curdate() from dual;
+            +------------+
+            | curdate()  |
+            +------------+
+            | 2024-04-13 |
+            +------------+
+            1 row in set (0.00 sec)</PRE><BR>
+        
+    <H4>CURTIME():<BR>
+        RETURN THE CURRENT TIME.</H4>
+        <PRE>mysql> select curtime() from dual;
+            +-----------+
+            | curtime() |
+            +-----------+
+            | 10:40:12  |
+            +-----------+
+            1 row in set (0.01 sec)</PRE><BR>
+
+    <H4>DATEDIFF():<BR>
+        RETURNS EXPR1 - EXPR2 EXPRESSED AS A VALUE IN DAYS FROM ONE DATE TO THE OTHER. EXPR1 AND EXPR2 ARE DATE OR DATE OR DATE-AND-TIME EXPRESSIONS.</H4>
+        <PRE>mysql> select datediff(sysdate(),'2023-04-13') from dual;
+            +----------------------------------+
+            | datediff(sysdate(),'2023-04-13') |
+            +----------------------------------+
+            |                              366 |
+            +----------------------------------+
+            1 row in set (0.06 sec)</PRE><br>
+
+    <H4>DAYNAME(DATE):<BR>
+        RETURNS THE NAME OF THE WEEKDAY FOR DATE. THE LANGUAGE USED FOR THE NAME IS CONTROLLED BY THE VALUE OF THE LC_TIME_NAMES SYSTEM VARIABLE.</H4>
+        <PRE>mysql> select dayname(sysdate()) from dual;
+            +--------------------+
+            | dayname(sysdate()) |
+            +--------------------+
+            | Saturday           |
+            +--------------------+
+            1 row in set (0.04 sec)</PRE>
+</body>
+</html>
